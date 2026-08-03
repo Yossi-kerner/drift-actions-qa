@@ -1,0 +1,8 @@
+environments:
+  child-a:
+    name: drift-qa-child-a
+    templateName: 'qa-drift-child-a'
+  child-b:
+    name: drift-qa-child-b
+    templateName: 'qa-drift-child-b'
+    needs: [ child-a ]
