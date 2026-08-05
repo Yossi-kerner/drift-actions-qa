@@ -8,6 +8,6 @@ terraform {
 
 resource "null_resource" "unapplied" {
   triggers = {
-    rev = "r6"
+    rev = "r7"
   }
 }
