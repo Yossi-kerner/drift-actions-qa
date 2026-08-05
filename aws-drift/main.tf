@@ -44,3 +44,15 @@ module "nested" {
   source      = "./modules/nested-param"
   name_suffix = var.name_suffix
 }
+
+# APO-403 QA: a parameter whose terraform id (the SSM name) exceeds 50 characters,
+# so the Unmanaged Change tab must truncate it and show a tooltip.
+resource "aws_ssm_parameter" "long_id" {
+  name  = "/drift-actions-qa/${var.name_suffix}/a-deliberately-long-parameter-name-for-truncation-check"
+  type  = "String"
+  value = "managed-by-env0"
+
+  tags = {
+    drift_qa = "apo-403-truncation"
+  }
+}
