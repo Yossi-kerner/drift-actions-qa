@@ -20,7 +20,7 @@ module "label" {
 
 resource "null_resource" "tg_flat" {
   triggers = {
-    rev   = "t2"
+    rev   = "t3"
     label = module.label.id
   }
 }
