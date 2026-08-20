@@ -16,3 +16,5 @@ pinned to the baseline commit and drift-scanned at head.
 A drift scan only records causes when the plan actually drifts, so every
 "version change" commit also changes a `null_resource` trigger in the same
 folder.
+
+C1 out-of-path.
