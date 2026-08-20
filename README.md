@@ -24,3 +24,5 @@ A2 out-of-path change.
 A4 out-of-path change.
 
 C7 step3 unrelated.
+
+C4 step2 out-of-path.
