@@ -28,3 +28,8 @@ variable "apo603_a1" {
   type    = string
   default = "a1"
 }
+
+variable "apo603_a5" {
+  type    = string
+  default = "a5"
+}
