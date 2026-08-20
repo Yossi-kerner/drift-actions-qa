@@ -16,3 +16,9 @@ pinned to the baseline commit and drift-scanned at head.
 A drift scan only records causes when the plan actually drifts, so every
 "version change" commit also changes a `null_resource` trigger in the same
 folder.
+
+# apo603 qa branch base
+
+A2 out-of-path change.
+
+A4 out-of-path change.
