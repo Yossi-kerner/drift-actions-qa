@@ -23,3 +23,8 @@ resource "null_resource" "drift_qa" {
     secret_trigger = sha256(var.secret_trigger)
   }
 }
+
+variable "apo603_c1" {
+  type    = string
+  default = "c1"
+}
