@@ -28,3 +28,5 @@ variable "apo603_c1" {
   type    = string
   default = "c1"
 }
+
+# APO-593 QA: initial PR-plan event
