@@ -30,3 +30,4 @@ variable "apo603_c1" {
 }
 
 # APO-593 QA: initial PR-plan event
+# APO-593 QA: C1 active-environment event
