@@ -17,9 +17,9 @@ moved {
   to   = null_resource.renamed
 }
 
-resource "null_resource" "imported" {}
+resource "terraform_data" "imported" {}
 
 import {
-  to = null_resource.imported
+  to = terraform_data.imported
   id = "apo634-import"
 }
