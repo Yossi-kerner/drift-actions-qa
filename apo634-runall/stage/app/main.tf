@@ -12,7 +12,7 @@ variable "stack_name" {
 
 variable "gen" {
   type    = string
-  default = "1"
+  default = "2"
 }
 
 module "edge" {
