@@ -16,3 +16,10 @@ moved {
   from = null_resource.original
   to   = null_resource.renamed
 }
+
+resource "null_resource" "imported" {}
+
+import {
+  to = null_resource.imported
+  id = "apo634-import"
+}
