@@ -8,7 +8,7 @@ terraform {
 
 variable "servers" {
   type    = set(string)
-  default = ["qos1-phx.eb.ucaas.tech"]
+  default = []
 }
 
 module "ns-cluster" {
