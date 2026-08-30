@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "null_resource" "bulk" {
-  count = 60
+  count = 0
 
   triggers = {
     idx = tostring(count.index)
@@ -18,5 +18,5 @@ resource "null_resource" "bulk" {
 }
 
 resource "random_pet" "extra" {
-  count = 5
+  count = 0
 }
