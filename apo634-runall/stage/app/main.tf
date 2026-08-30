@@ -21,12 +21,6 @@ module "edge" {
   gen        = var.gen
 }
 
-module "core" {
-  source     = "../../modules/edge"
-  stack_name = var.stack_name
-  gen        = var.gen
-}
-
 output "vpc_id" {
   value = "vpc-${var.stack_name}"
 }
