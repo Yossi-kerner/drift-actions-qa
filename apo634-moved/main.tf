@@ -6,20 +6,22 @@ terraform {
   }
 }
 
-resource "null_resource" "renamed" {
+resource "null_resource" "renamed_again" {
   triggers = {
     name = "apo634-moved"
   }
 }
 
 moved {
-  from = null_resource.original
-  to   = null_resource.renamed
+  from = null_resource.renamed
+  to   = null_resource.renamed_again
 }
 
 resource "terraform_data" "imported" {}
 
+resource "terraform_data" "imported_two" {}
+
 import {
-  to = terraform_data.imported
-  id = "apo634-import"
+  to = terraform_data.imported_two
+  id = "apo615-import-2"
 }
