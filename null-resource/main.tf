@@ -8,7 +8,7 @@ terraform {
 
 variable "drift_trigger" {
   type    = string
-  default = "apo740-run3"
+  default = "apo740-run4"
 }
 
 variable "secret_trigger" {
@@ -29,12 +29,12 @@ variable "apo603_c1" {
   default = "c1"
 }
 
-resource "null_resource" "apo740_failing_apply" {
+resource "null_resource" "apo740_leak_probe" {
   triggers = {
-    run = "apo740-qa-3"
+    run = "apo740-qa-4"
   }
 
   provisioner "local-exec" {
-    command = "echo 'APO-740 QA deliberate apply failure: this provisioner prints a very long single line so that the generated commit check description exceeds the two hundred character cap enforced at the write boundary in put-commit-check, exercising the truncation and the ANSI and box-drawing stripping together' && exit 1"
+    command = "echo \"auth failed for key $QA_LEAK_KEY at $QA_LEAK_URL\" && exit 1"
   }
 }
