@@ -8,7 +8,7 @@ terraform {
 
 variable "drift_trigger" {
   type    = string
-  default = "apo740-b3"
+  default = "baseline"
 }
 
 variable "secret_trigger" {
