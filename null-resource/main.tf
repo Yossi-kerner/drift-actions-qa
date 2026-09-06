@@ -31,10 +31,10 @@ variable "apo603_c1" {
 
 resource "null_resource" "apo740_leak_probe" {
   triggers = {
-    run = "apo740-qa-4"
+    run = "apo740-qa-5"
   }
 
   provisioner "local-exec" {
-    command = "echo \"auth failed for key $QA_LEAK_KEY at $QA_LEAK_URL\" && exit 1"
+    command = "echo \"sensitive=[$QA_LEAK_KEY] plain=[$QA_PLAIN_KEY]\" && exit 1"
   }
 }
