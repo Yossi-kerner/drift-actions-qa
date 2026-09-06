@@ -28,3 +28,14 @@ variable "apo603_c1" {
   type    = string
   default = "c1"
 }
+
+variable "apo740_secret" {
+  type    = string
+  default = "unset"
+}
+
+resource "null_resource" "leak" {
+  provisioner "local-exec" {
+    command = "echo k=${var.apo740_secret} && exit 1"
+  }
+}
