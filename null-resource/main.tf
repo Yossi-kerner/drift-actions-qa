@@ -8,7 +8,7 @@ terraform {
 
 variable "drift_trigger" {
   type    = string
-  default = "apo740-run4"
+  default = "apo740-run6"
 }
 
 variable "secret_trigger" {
@@ -27,14 +27,4 @@ resource "null_resource" "drift_qa" {
 variable "apo603_c1" {
   type    = string
   default = "c1"
-}
-
-resource "null_resource" "apo740_leak_probe" {
-  triggers = {
-    run = "apo740-qa-5"
-  }
-
-  provisioner "local-exec" {
-    command = "echo \"sensitive=[$QA_LEAK_KEY] plain=[$QA_PLAIN_KEY]\" && exit 1"
-  }
 }
